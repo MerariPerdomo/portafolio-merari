@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgIf } from '@angular/common'; 
-
+import { Navbar } from './components/navbar/navbar';
 @Component({
   selector: 'app-root',
-  standalone: true,               // <--- Agrega esto, que es necesario para standalone
-  imports: [RouterOutlet, NgIf], 
+  standalone: true,
+  imports: [RouterOutlet, NgIf, Navbar], 
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
