@@ -1,22 +1,4 @@
-
-<main class="font-sans text-gray-800">
-  
+<main class="text-gray-800">
   <app-navbar></app-navbar>
-
-  <div class="p-8 text-center">
-  <!-- Muestra el saludo si mostrarMensaje es true -->
-  <h1 *ngIf="mostrarMensaje" class="text-3xl font-bold mb-4">
-    Hola, {{ nombre }}!
-  </h1>
-
-  <!-- Botón para alternar el mensaje -->
-  <button
-    (click)="toggleMensaje()"
-    class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
-  >
-    Mostrar/Ocultar saludo
-  </button>
-</div>
-
-
-<router-outlet />
+  <app-inicio></app-inicio>
+  <app-servicios></app-servicios>

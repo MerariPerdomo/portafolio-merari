@@ -1,31 +1,13 @@
 <!-- src/app/navbar/navbar.component.html -->
-<nav class="bg-[#BBE4E3] text-[#CE49A6] px-6 py-4 shadow-md flex items-center justify-between">
-  <div class="text-xl font-bold tracking-wide text-[#CE49A6]">Merari Perdomo</div>
-
-  <ul class="hidden md:flex gap-6 text-sm font-medium">
-    <li><a href="#" class="hover:text-teal-400 transition">Dashboard</a></li>
-    <li><a href="#" class="hover:text-teal-400 transition">Proyectos</a></li>
-    <li><a href="#" class="hover:text-teal-400 transition">Servicios</a></li>
-    <li><a href="#" class="hover:text-teal-400 transition">Contacto</a></li>
+<nav class="navbar">
+  <div class="logo">M. PERDOMO</div>
+  <ul class="nav-links">
+    <li>
+      <a
+        class="navbar-link"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=angcm2508@gmail.com&su=Solicitud%20de%20Información%20sobre%20Servicios%20de%20Desarrollo&body=Hola%20Merari%20Perdomo..."
+        >Contáctame</a
+      >
+    </li>
   </ul>
-
-  <div class="md:hidden">
-    <button (click)="toggleMenu()" class="focus:outline-none">
-      <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
 </nav>
-
-<!-- Menu móvil -->
-<div *ngIf="menuOpen" class="md:hidden bg-gray-800 text-white px-6 py-4">
-  <ul class="flex flex-col gap-4 text-sm font-medium">
-    <li><a href="#" class="hover:text-teal-400">Dashboard</a></li>
-    <li><a href="#" class="hover:text-teal-400">Proyectos</a></li>
-    <li><a href="#" class="hover:text-teal-400">Servicios</a></li>
-    <li><a href="#" class="hover:text-teal-400">Contacto</a></li>
-  </ul>
-</div>

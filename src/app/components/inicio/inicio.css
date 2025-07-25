@@ -1,0 +1,104 @@
+.example-2 {
+    display: flex; /* Configura flexbox */
+    gap: 15px; /* Espaciado uniforme entre los iconos */
+    padding: 10px; /* Añade un poco de espacio dentro del contenedor */
+}
+
+.example-2 .icon-content {
+    margin: 0; /* Asegura que no haya márgenes adicionales */
+    position: relative; /* Necesario para posicionar el tooltip */
+}
+
+.example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px; /* Posiciona el tooltip sobre el icono */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0; /* Tooltip invisible por defecto */
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px; /* Eleva el tooltip al pasar el ratón */
+}
+
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+    color: white;
+}
+
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.example-2 .icon-content a .filled {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+/* Estilos específicos para cada red social */
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="Gmail"] .filled,
+.example-2 .icon-content a[data-social="Gmail"] ~ .tooltip {
+    background-color: #cc1414;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
+    );
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+}
